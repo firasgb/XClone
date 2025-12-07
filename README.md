@@ -3,7 +3,7 @@ A full-stack Twitter/X clone built with the MERN stack (MongoDB, Express, React,
 
 # ✨ Features
 
-👤 User Features
+# 👤 User Features
 ✅ Secure Authentication – JWT-based login/signup with HTTP-only cookies
 ✅ Create Posts – Text, image, or both (Cloudinary integration)
 ✅ Like/Comment – Interact with posts in real-time
@@ -12,55 +12,64 @@ A full-stack Twitter/X clone built with the MERN stack (MongoDB, Express, React,
 ✅ Profile Management – Customizable profiles with verification badges
 ✅ Responsive Design – Mobile-friendly interface
 
-⚙️ Admin Features
+# ⚙️ Admin Features
 ✅ User Management – View, update, and delete users
 ✅ Verification Management – Grant/revoke blue badges
 ✅ Statistics Dashboard – Platform insights and metrics
 
 # 🛠️ Tech Stack
 
-Frontend
-React – UI library with Vite
-Tailwind CSS – Utility-first CSS framework
-DaisyUI – Component library
-React Query – Data fetching & state management
-React Icons – Icon library
+# Frontend
+React – UI library with Vite |
+Tailwind CSS – Utility-first CSS framework |
+DaisyUI – Component library |
+React Query – Data fetching & state management |
+React Icons – Icon library |
 React Hot Toast – Toast notifications
 
-Backend
-Node.js – Runtime environment
-Express.js – Web framework
-MongoDB – NoSQL database
-Mongoose – ODM for MongoDB
-JWT – Authentication
-Bcryptjs – Password hashing
-Cloudinary – Image hosting
+# Backend
+Node.js – Runtime environment |
+Express.js – Web framework |
+MongoDB – NoSQL database |
+Mongoose – ODM for MongoDB |
+JWT – Authentication |
+Bcryptjs – Password hashing |
+Cloudinary – Image hosting 
 
 # 🚀 Quick Start
 
 # Prerequisites
-Node.js (v16+)
-MongoDB (local or Atlas)
+Node.js (v16+) |
+MongoDB (local or Atlas) |
 npm or yarn
 
 # Installation
 Clone the repository
-bash
+
 git clone https://github.com/your-username/X_Clone.git
+
 cd X_Clone
 
-Setup environment variables
-bash
-# Copy environment example file
+# Setup environment variables
+
+Copy environment example file
+
 cp .env.example .env
+
 Edit .env with your credentials:
 
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URI=your_mongodb_connection_string 
+
 JWT_SECRET=your_jwt_secret_key
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
+
 CLOUDINARY_API_KEY=your_api_key
+
 CLOUDINARY_API_SECRET=your_api_secret
+
 PORT=5000
+
 CLIENT_URL=http://localhost:4000
 
 Install dependencies
