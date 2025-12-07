@@ -50,8 +50,4 @@ The client runs on port `4000` and proxies API requests starting with `/api` to 
 ## Contributing
 - Open issues or PRs. If you plan to run locally, follow the setup steps above and ensure you have a local MongoDB instance or a cloud MongoDB URI.
 
----
-If you want, I can also:
-- Add a `README` section describing the main API endpoints.
-- Add a simple GitHub Actions workflow to run linting or tests before push.
 
