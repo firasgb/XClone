@@ -52,9 +52,7 @@ cd X_Clone
 
 # Setup environment variables
 
-Copy environment example file
-
-cp .env.example .env
+Copy environment example file => cp .env.example .env
 
 Edit .env with your credentials:
 
@@ -72,8 +70,7 @@ PORT=5000
 
 CLIENT_URL=http://localhost:4000
 
-Install dependencies
-bash
+ # Install dependencies
 # Backend dependencies
 cd server
 npm install
@@ -81,50 +78,36 @@ npm install
 # Frontend dependencies
 cd ../client
 npm install
-Run the application
 
-bash
+# Run the application
+
 # From project root (recommended)
 npm run dev
 
 # Or run separately:
 # Terminal 1 - Start backend
 cd server
+
 npm run dev
+
 Backend API: ⚙️ http://localhost:5000/api
 
 # Terminal 2 - Start frontend
 cd client
+
 npm run dev
+
 Frontend: 🌐 http://localhost:4000
-
-📁 Project Structure
-
-X_Clone/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── pages/        # Page components (Home, Profile, etc.)
-│   │   ├── hooks/        # Custom React hooks
-│   │   ├── contexts/     # React contexts (Auth, Theme)
-│   │   └── utils/        # Utility functions
-│   ├── public/
-│   └── vite.config.js    # Vite configuration
-├── server/                 # Express backend
-│   ├── controllers/       # Route controllers
-│   ├── models/           # Mongoose models (User, Post, Notification)
-│   ├── routes/           # API endpoints
-│   ├── middleware/       # Authentication middleware
-│   ├── security/         # JWT & cookie utilities
-│   └── .env              # Environment variables
-├── .env.example           # Environment template
-└── README.md             # Project documentation
 
 🐛 Common Issues & Troubleshooting
 
 Issue	Solution
-ECONNREFUSED from Vite proxy	Ensure backend is running on port 5000 and check client/vite.config.js
+ECONNREFUSED from Vite proxy	Ensure backend is running on port 5000 and check client/vite.config.js 
+
 MongoDB connection error	Verify MONGODB_URI in .env and ensure MongoDB is running
+
 JWT token not working	Check JWT_SECRET in environment variables
+
 Cloudinary upload fails	Verify Cloudinary credentials in .env
+
 CORS errors	Ensure CLIENT_URL is correctly set in backend CORS configuration
