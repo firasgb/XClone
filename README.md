@@ -1,53 +1,121 @@
-# X_Clone
-# X_Clone
+🐦 X Clone - Twitter/X Clone
+A full-stack Twitter/X clone built with the MERN stack (MongoDB, Express, React, Node.js) featuring real-time social interactions, JWT authentication, and admin capabilities.
 
-A minimal Twitter/X-like clone (frontend + Express/MongoDB backend). This repo contains a `server` (Express + MongoDB) and a `client` (React + Vite + Tailwind).
+✨ Features
 
-## Features
-- User signup / login (JWT in cookie)
-- Create and list posts (with optional image uploads via Cloudinary)
-- Follow/unfollow users, notifications
+👤 User Features
+✅ Secure Authentication – JWT-based login/signup with HTTP-only cookies
+✅ Create Posts – Text, image, or both (Cloudinary integration)
+✅ Like/Comment – Interact with posts in real-time
+✅ Follow System – Follow/unfollow other users
+✅ Real-time Notifications – Get notified for interactions
+✅ Profile Management – Customizable profiles with verification badges
+✅ Responsive Design – Mobile-friendly interface
 
-## Tech stack
-- Backend: Node.js, Express, Mongoose (MongoDB)
-- Frontend: React, Vite, Tailwind CSS
-- Auth: JWT stored in HTTP-only cookies
-- Image hosting (optional): Cloudinary
+⚙️ Admin Features
+✅ User Management – View, update, and delete users
+✅ Verification Management – Grant/revoke blue badges
+✅ Statistics Dashboard – Platform insights and metrics
 
-## Environment
-- Copy `.env.example` to a new file named `.env` at the project root and fill in real values.
-- `.env` is ignored by git; keep secrets out of the repo.
+🛠️ Tech Stack
 
-## Setup (Windows PowerShell)
+Frontend
+React – UI library with Vite
+Tailwind CSS – Utility-first CSS framework
+DaisyUI – Component library
+React Query – Data fetching & state management
+React Icons – Icon library
+React Hot Toast – Toast notifications
 
-From project root (install server deps and run the backend):
+Backend
+Node.js – Runtime environment
+Express.js – Web framework
+MongoDB – NoSQL database
+Mongoose – ODM for MongoDB
+JWT – Authentication
+Bcryptjs – Password hashing
+Cloudinary – Image hosting
 
-```powershell
-cd c:\Users\firas\Desktop\X_Clone-main
+🚀 Quick Start
+
+Prerequisites
+Node.js (v16+)
+MongoDB (local or Atlas)
+npm or yarn
+
+Installation
+Clone the repository
+bash
+git clone https://github.com/your-username/X_Clone.git
+cd X_Clone
+
+Setup environment variables
+bash
+# Copy environment example file
+cp .env.example .env
+Edit .env with your credentials:
+
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+PORT=5000
+CLIENT_URL=http://localhost:4000
+
+Install dependencies
+bash
+# Backend dependencies
 cd server
 npm install
-cd ..
-npm run dev
-```
 
-In a separate terminal, start the frontend:
-
-```powershell
-cd c:\Users\firas\Desktop\X_Clone-main\client
+# Frontend dependencies
+cd ../client
 npm install
+Run the application
+
+bash
+# From project root (recommended)
 npm run dev
-```
 
-The client runs on port `4000` and proxies API requests starting with `/api` to the backend at `http://localhost:5000` (configured in `client/vite.config.js`).
+# Or run separately:
+# Terminal 1 - Start backend
+cd server
+npm run dev
+Backend API: ⚙️ http://localhost:5000/api
 
-## Common issues
-- `ECONNREFUSED` from Vite proxy: ensure the backend is running and listening on the same port as configured in `client/vite.config.js` (default `5000`).
-- DB connection errors: confirm `MONGODB_URI` in your `.env` and that MongoDB is reachable.
+# Terminal 2 - Start frontend
+cd client
+npm run dev
+Frontend: 🌐 http://localhost:4000
 
-## Deployment
-- For production, build the client (`cd client && npm run build`) and deploy the server and built client to your host of choice. Review cookie settings for `secure` and `sameSite` in `server/security/generateToken.js`.
+📁 Project Structure
 
-## Contributing
-- Open issues or PRs. If you plan to run locally, follow the setup steps above and ensure you have a local MongoDB instance or a cloud MongoDB URI.
+X_Clone/
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/    # Reusable components
+│   │   ├── pages/        # Page components (Home, Profile, etc.)
+│   │   ├── hooks/        # Custom React hooks
+│   │   ├── contexts/     # React contexts (Auth, Theme)
+│   │   └── utils/        # Utility functions
+│   ├── public/
+│   └── vite.config.js    # Vite configuration
+├── server/                 # Express backend
+│   ├── controllers/       # Route controllers
+│   ├── models/           # Mongoose models (User, Post, Notification)
+│   ├── routes/           # API endpoints
+│   ├── middleware/       # Authentication middleware
+│   ├── security/         # JWT & cookie utilities
+│   └── .env              # Environment variables
+├── .env.example           # Environment template
+└── README.md             # Project documentation
 
+🐛 Common Issues & Troubleshooting
 
+Issue	Solution
+ECONNREFUSED from Vite proxy	Ensure backend is running on port 5000 and check client/vite.config.js
+MongoDB connection error	Verify MONGODB_URI in .env and ensure MongoDB is running
+JWT token not working	Check JWT_SECRET in environment variables
+Cloudinary upload fails	Verify Cloudinary credentials in .env
+CORS errors	Ensure CLIENT_URL is correctly set in backend CORS configuration
