@@ -1,7 +1,7 @@
-🐦 X Clone - Twitter/X Clone
+# 🐦 X Clone - Twitter/X Clone
 A full-stack Twitter/X clone built with the MERN stack (MongoDB, Express, React, Node.js) featuring real-time social interactions, JWT authentication, and admin capabilities.
 
-✨ Features
+# ✨ Features
 
 👤 User Features
 ✅ Secure Authentication – JWT-based login/signup with HTTP-only cookies
@@ -17,7 +17,7 @@ A full-stack Twitter/X clone built with the MERN stack (MongoDB, Express, React,
 ✅ Verification Management – Grant/revoke blue badges
 ✅ Statistics Dashboard – Platform insights and metrics
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Frontend
 React – UI library with Vite
@@ -36,14 +36,14 @@ JWT – Authentication
 Bcryptjs – Password hashing
 Cloudinary – Image hosting
 
-🚀 Quick Start
+# 🚀 Quick Start
 
-Prerequisites
+# Prerequisites
 Node.js (v16+)
 MongoDB (local or Atlas)
 npm or yarn
 
-Installation
+# Installation
 Clone the repository
 bash
 git clone https://github.com/your-username/X_Clone.git
