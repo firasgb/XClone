@@ -46,7 +46,7 @@ npm or yarn
 # Installation
 Clone the repository
 
-git clone https://github.com/your-username/X_Clone.git
+git clone https://github.com/firasgb/XClone.git
 
 cd X_Clone
 
